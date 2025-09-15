@@ -37,12 +37,6 @@ func (s *SimpleRunnerExiter) Exit(fn func()) {
 	fn()
 }
 
-type Goodbye struct{}
-
-func (g *Goodbye) Exit() {
-	fmt.Println("Exiting gracefully")
-}
-
 // --- Main ---
 func main() {
 	re := &SimpleRunnerExiter{}
